@@ -42,7 +42,7 @@ get_platform() {
 
 get_arch() {
   # the tilt builds arch names match the output of uname -m exactly.
-  uname -m
+  uname -m | sed 's/aarch64/arm64/'
 }
 
 get_download_url() {
